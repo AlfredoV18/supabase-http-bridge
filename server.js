@@ -6,8 +6,8 @@ const app = express();
 app.use(express.json());
 
 // Lee config desde variables de entorno
-const SUPABASE_URL = https://piybdddhskfndoynucka.supabase.co
-const SUPABASE_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpeWJkZGRoc2tmbmRveW51Y2thIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyNjI5NjIsImV4cCI6MjA3NjgzODk2Mn0.pmdwMXptYDHtuf9yM6JL7VC_aVqNlzXYEK2e1WvbmkA
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_KEY;
 const PORT = process.env.PORT || 10000;
 
 if (!SUPABASE_URL || !SUPABASE_KEY) {
